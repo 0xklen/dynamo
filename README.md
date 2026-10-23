@@ -94,6 +94,29 @@ cd dynamo
    chain, battery chemistry, charge controllers, and the BMS. Same physics as
    a solar setup.
 
+## Video tutorial
+
+A 12-step assembly video is in the repo:
+
+[video/dynamo-tutorial.mp4](video/dynamo-tutorial.mp4)
+
+It walks the hand-crank build from parts to a lit LED — winding the coil,
+scraping the wire, mounting magnets, setting the air gap, wiring in series,
+adding the rectifier, capacitor and LED, cranking and measuring, then storing
+the power. Regenerate it any time:
+
+```bash
+python3 tools/make_video.py   # needs resvg + ffmpeg on PATH
+```
+
+## Powering a whole house?
+
+Read [home-power.md](home-power.md) before you buy anything. It does the
+honest math on running 5 air conditioners, a fridge, a TV, a computer and 10
+lights — and explains why a magnet generator is the *physics*, not the *power
+source*. The real system (solar + battery + inverter) and its full materials
+list are in [materials.md](materials.md).
+
 ## Repo layout
 
 ```
@@ -102,6 +125,12 @@ dynamo/
 ├── theory.md       the physics — Faraday, Lenz, AC/DC, how to get more voltage
 ├── TUTORIAL.md     three builds, step by step, with troubleshooting
 ├── storage.md      batteries — the charge chain, chemistry, controllers, BMS, safety
+├── materials.md    every part, with specs and costs — small builds and home scale
+├── home-power.md   the honest math on powering a house
+├── video/
+│   └── dynamo-tutorial.mp4   the 12-step assembly video
+├── tools/
+│   └── make_video.py         regenerates the video from SVG frames
 ├── assets/
 │   ├── logo.svg    the mark (a coil and a bolt)
 │   └── logo.png    512px raster
