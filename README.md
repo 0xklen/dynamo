@@ -90,6 +90,9 @@ cd dynamo
    instead of being magic.
 2. Follow [TUTORIAL.md](TUTORIAL.md) — build the Faraday flashlight first.
 3. When the LED blinks, move up to the hand-crank dynamo.
+4. To keep the power for later, read [storage.md](storage.md) — the charge
+   chain, battery chemistry, charge controllers, and the BMS. Same physics as
+   a solar setup.
 
 ## Repo layout
 
@@ -98,6 +101,7 @@ dynamo/
 ├── README.md       this page
 ├── theory.md       the physics — Faraday, Lenz, AC/DC, how to get more voltage
 ├── TUTORIAL.md     three builds, step by step, with troubleshooting
+├── storage.md      batteries — the charge chain, chemistry, controllers, BMS, safety
 ├── assets/
 │   ├── logo.svg    the mark (a coil and a bolt)
 │   └── logo.png    512px raster
@@ -127,6 +131,12 @@ Rectify it to DC with four diodes. The tutorial shows the exact wiring.
 **How does this relate to a real power plant?**
 Identical physics. A plant just spins a huge magnet (or electromagnet) inside
 a huge coil using steam, falling water, or wind instead of your hand.
+
+**How do I store it in a battery?**
+You can't wire the generator straight to a battery — you need a rectifier, a
+voltage regulator, and a charge controller (and a BMS for lithium). The full
+chain, battery chemistry, and safety are in [storage.md](storage.md). It is
+the same chain a solar panel uses.
 
 ## License
 
